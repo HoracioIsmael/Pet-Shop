@@ -1,0 +1,272 @@
+[
+    {
+        "_id": "1",
+        "tipo": "Juguete",
+        "nombre": "Pelota para perros",
+        "descripcion": "Pelota de goma resistente\n  \n para perros",
+        "imagen": "img/imgJson/imagen30.jpg",
+        "stock": 20,
+        "precio": 10.99
+    },
+    {
+        "_id": "2",
+        "tipo": "Juguete",
+        "nombre": "Juguete interactivo \n para gatos",
+        "descripcion": "Juguete con plumas y cuerda \n \n  para entretener a los gatos",
+        "imagen": "img/imgJson/imagen16.jpg",
+        "stock": 15,
+        "precio": 8.49
+    },
+    {
+        "_id": "3",
+        "tipo": "Juguete",
+        "nombre": "Peluche para perros",
+        "descripcion": "Suave y cómodo peluche \n \n  para perros pequeños",
+        "imagen": "img/imgJson/imagen18.jpg",
+        "stock": 18,
+        "precio": 12.99
+    },
+    {
+        "_id": "4",
+        "tipo": "Juguete",
+        "nombre": "Ratón de juguete \n para gatos",
+        "descripcion": "Divertido ratón de juguete \n  \n con catnip para gatos",
+        "imagen": "img/imgJson/imagen17.jpg",
+        "stock": 12,
+        "precio": 6.75
+    },
+    {
+        "_id": "5",
+        "tipo": "Juguete",
+        "nombre": "Juguete para gatos",
+        "descripcion": "Juguete con campanillas \n  \n para gatos",
+        "imagen": "img/imgJson/imagen19.jpg",
+        "stock": 15,
+        "precio": 7.99
+    },
+    {
+        "_id": "6",
+        "tipo": "Juguete",
+        "nombre": "Pelota de tenis \n para perros",
+        "descripcion": "Pelota de tenis para perros \n  \n de todos los tamaños",
+        "imagen": "img/imgJson/imagen20.jpg",
+        "stock": 25,
+        "precio": 9.49
+    },
+    {
+        "_id": "7",
+        "tipo": "Juguete",
+        "nombre": "Peluche para gatos",
+        "descripcion": "Peluche suave y acogedor \n \n para gatos",
+        "imagen": "img/imgJson/imagen22.jpg",
+        "stock": 10,
+        "precio": 11.99
+    },
+    {
+        "_id": "8",
+        "tipo": "Juguete",
+        "nombre": "Pelota para perros",
+        "descripcion": "Pelota de goma resistente \n  \n para perros",
+        "imagen": "img/imgJson/imagen21.jpg",
+        "stock": 20,
+        "precio": 10.99
+    },
+    {
+        "_id": "9",
+        "tipo": "Juguete",
+        "nombre": "Juguete interactivo \n  para perros",
+        "descripcion": "Juguete con plumas y cuerda \n  \n  para entretener \n \n a los perros",
+        "imagen": "img/imgJson/imagen24.jpg",
+        "stock": 15,
+        "precio": 8.49
+    },
+    {
+        "_id": "10",
+        "tipo": "Juguete",
+        "nombre": "Peluche para perros",
+        "descripcion": "Suave y cómodo peluche \n  \n  para perros pequeños",
+        "imagen": "img/imgJson/imagen23.jpg",
+        "stock": 18,
+        "precio": 12.99
+    },
+    {
+        "_id": "11",
+        "tipo": "Juguete",
+        "nombre": "Ratón de juguete \n para gatos",
+        "descripcion": "Divertido ratón de \n  \n  juguete con catnip \n  \n  para gatos",
+        "imagen": "img/imgJson/imagen25.jpg",
+        "stock": 12,
+        "precio": 6.75
+    },
+    {
+        "_id": "12",
+        "tipo": "Juguete",
+        "nombre": "Juguete para perros",
+        "descripcion": "Juguete con campanillas \n  \n  para perros",
+        "imagen": "img/imgJson/imagen26.jpg",
+        "stock": 15,
+        "precio": 7.99
+    },
+    {
+        "_id": "13",
+        "tipo": "Juguete",
+        "nombre": "Pelota de tenis \n para perros",
+        "descripcion": "Pelota de tenis para \n \n   perros de todos \n \n   los tamaños",
+        "imagen": "img/imgJson/imagen27.jpg",
+        "stock": 25,
+        "precio": 9.49
+    },
+    {
+        "_id": "14",
+        "tipo": "Juguete",
+        "nombre": "Peluche para gatos",
+        "descripcion": "Peluche suave y acogedor \n \n   para gatos",
+        "imagen": "img/imgJson/imagen29.jpg",
+        "stock": 10,
+        "precio": 11.99
+    },
+    {
+        "_id": "15",
+        "tipo": "Juguete",
+        "nombre": "Pelota de tenis \n para perros",
+        "descripcion": "Pelota de tenis para \n \n   perros de todos \n \n  los tamaños",
+        "imagen": "img/imgJson/imagen28.jpg",
+        "stock": 25,
+        "precio": 9.49
+    },
+    {
+        "_id": "16",
+        "tipo": "Medicamento",
+        "nombre": "Antipulgas para perros",
+        "descripcion": "Tratamiento antipulgas para \n \n perros de todos \n \n los tamaños",
+        "imagen": "img/imgJson/imagen15.jpg",
+        "stock": 30,
+        "precio": 25.99
+    },
+    {
+        "_id": "17",
+        "tipo": "Medicamento",
+        "nombre": "Vitaminas para gatos",
+        "descripcion": "Suplemento vitamínico para \n \n la salud de los gatos",
+        "imagen": "img/imgJson/imagen14.jpg",
+        "stock": 25,
+        "precio": 18.75
+    },
+    {
+        "_id": "18",
+        "tipo": "Medicamento",
+        "nombre": "Analgésico para perros",
+        "descripcion": "Analgésico para aliviar \n  el dolor en perros",
+        "imagen": "img/imgJson/imagen13.jpg",
+        "stock": 20,
+        "precio": 15.49
+    },
+    {
+        "_id": "19",
+        "tipo": "Medicamento",
+        "nombre": "Antiinflamatorio para \n perros",
+        "descripcion": "Antiinflamatorio para \n \n  reducir la inflamación  \n \n en perros",
+        "imagen": "img/imgJson/imagen12.jpg",
+        "stock": 22,
+        "precio": 13.95
+    },
+    {
+        "_id": "20",
+        "tipo": "Medicamento",
+        "nombre": "Antipulgas para perros",
+        "descripcion": "Tratamiento antipulgas para \n \n  perros de todos  \n \n los tamaños",
+        "imagen": "img/imgJson/imagen11.jpg",
+        "stock": 30,
+        "precio": 25.99
+    },
+    {
+        "_id": "21",
+        "tipo": "Medicamento",
+        "nombre": "Vitaminas para perros",
+        "descripcion": "Suplemento vitamínico \n  \n  para la salud \n \n de los perros",
+        "imagen": "img/imgJson/imagen10.jpg",
+        "stock": 25,
+        "precio": 18.75
+    },
+    {
+        "_id": "22",
+        "tipo": "Medicamento",
+        "nombre": "Analgésico para perros",
+        "descripcion": "Analgésico para aliviar \n \n el dolor en perros",
+        "imagen": "img/imgJson/imagen9.jpg",
+        "stock": 20,
+        "precio": 15.49
+    },
+    {
+        "_id": "23",
+        "tipo": "Medicamento",
+        "nombre": "Antiinflamatorio \n para perros",
+        "descripcion": "Antiinflamatorio para \n \n reducir la inflamación \n \n en perros",
+        "imagen": "img/imgJson/imagen8.jpg",
+        "stock": 22,
+        "precio": 13.95
+    },
+    {
+        "_id": "24",
+        "tipo": "Medicamento",
+        "nombre": "Antipulgas para perros",
+        "descripcion": "Tratamiento antipulgas \n \n para perros de todos \n los tamaños",
+        "imagen": "img/imgJson/imagen7.jpg",
+        "stock": 30,
+        "precio": 25.99
+    },
+    {
+        "_id": "25",
+        "tipo": "Medicamento",
+        "nombre": "Vitaminas para perros",
+        "descripcion": "Suplemento vitamínico \n \n para la salud de \n \n los perros",
+        "imagen": "img/imgJson/imagen6.jpg",
+        "stock": 25,
+        "precio": 18.75
+    },
+    {
+        "_id": "26",
+        "tipo": "Medicamento",
+        "nombre": "Analgésico para perros",
+        "descripcion": "Analgésico para aliviar \n \nel dolor en perros",
+        "imagen": "img/imgJson/imagen5.jpg",
+        "stock": 20,
+        "precio": 15.49
+    },
+    {
+        "_id": "27",
+        "tipo": "Medicamento",
+        "nombre": "Antiinflamatorio \n para perros",
+        "descripcion": "Antiinflamatorio para \n \n reducir la inflamación \n \n en perros",
+        "imagen": "img/imgJson/imagen4.jpg",
+        "stock": 22,
+        "precio": 13.95
+    },
+    {
+        "_id": "28",
+        "tipo": "Medicamento",
+        "nombre": "Antipulgas para perros",
+        "descripcion": "Tratamiento antipulgas \n \n para perros de todos \n \n los tamaños",
+        "imagen": "img/imgJson/imagen3.jpg",
+        "stock": 30,
+        "precio": 25.99
+    },
+    {
+        "_id": "29",
+        "tipo": "Medicamento",
+        "nombre": "Vitaminas para gatos",
+        "descripcion": "Suplemento vitamínico \n \n para la salud de \n \n los gatos",
+        "imagen": "img/imgJson/imagen2.jpg",
+        "stock": 25,
+        "precio": 18.75
+    },
+    {
+        "_id": "30",
+        "tipo": "Medicamento",
+        "nombre": "Analgésico para perros",
+        "descripcion": "Analgésico para aliviar \n \n el dolor en perros",
+        "imagen": "img/imgJson/imagen1.jpg",
+        "stock": 20,
+        "precio": 15.49
+    }
+]

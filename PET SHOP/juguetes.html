@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juguetes Franco Pet-Shop</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style_2.css" />
+  <link rel="icon" href="../img/unknown.png">
+  <!-- <link rel="stylesheet" href="../css/style_2.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@600&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- header  -->
+  <header class="header d-flex" style="height: 110px">
+    <img src="../assets/logo.png" alt="franco logo" width="250" />
+    <nav class="navbar mt-2">
+      <a href="../index.html" class="nvrr">Inicio</a>
+      <a href="../farmacia.html" class="nvrr">Farmacia</a>
+      <a class="nav-link active text-info nvrr" href="#">Juguetes</a>
+      <a href="../contacto.html " class="nvrr">Contactenos</a>
+      <a href="../carrito.html"><img class="carrito-nav" src="../assets/icons8-shopping-cart-48.png" alt="" /></a>
+    </nav>
+    <div class="icons">
+      <div class="fas fa-bars" id="menu-btn"></div>
+    </div>
+  </header>
+  <!-- header -->
+  <section class="juguetes" id="home">
+    <div class="wave">
+    </div>
+  </section>
+  <div class="farmaciajuguete">
+    <h1>juguetes</h1>
+  </div>
+  <!-- header  -->
+  <div id="app" class="mt-5">
+    <!-- BUSCADOR--------------- -->
+    {{search}}
+    <!-- escuchador computado para el search -->
+    <form class="d-flex flex-column mt-5 mb-0 mx-5" role="search">
+      <div class="df-row-cc mt-5 d-flex justify-content-center align-items-center">
+        <input class="form-control form-control-search me-2" type="text" placeholder="Buscar" aria-label="Search"
+          required v-model="value" />
+
+        <button class="btn btn-submit" type="submit" @click="submit" style="pointer-events: none;">
+          <img src="../assets/icons8-search-64.png" alt="" />
+        </button>
+      </div>
+    </form>
+    <!-- MENSAJE DE AÑADIDO/SIN STOCK -->
+    <div class="d-flex justify-content-center align-items-center" v-if="mje">
+      <div :class="mje=='¡Producto añadido!' ? 'content-mje-details' : 'content-mje'"
+        class="d-flex justify-content-center align-items-center">
+        <div class="message mje">{{mje}}</div>
+        <button class="btn-mje" @click="borrarMje">
+          <img class="ok" src="/assets/icons8-ok-48.png" alt="" />
+        </button>
+      </div>
+    </div>
+    <!-- CARTAS -->
+    <div class="contenedor-carta container d-flex justify-content-center">
+      <div class="cartaContainer">
+
+        <div class="carta" v-for="producto in productosFiltrados">
+          <div class="view front">
+            <img :src="producto.imagen" alt="imagen" />
+            <h2>{{producto.nombre}}</h2>
+          </div>
+          <div class="view back">
+            <h4 v-html="formatDescripcion(producto.nombre)"></h4>
+            <p v-html="formatDescripcion(producto.descripcion)"></p>
+            <p class="text-danger">
+              <!--{{producto.stock '<' 5 ? 'ULTIMAS UNIDADES!!!' : 'en Stock' }} </p>-->
+            <div class="link">
+              <a :href="'details.html?id='+producto._id">ver mas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- fin contenido -->
+  <footer class="pie-pagina">
+    <div class="grupo-1">
+      <div class="box">
+        <figure>
+          <a href="#">
+            <img src="../assets/logo_pet_shop_franco.png" alt="logo footer" id="logo_franco" />
+          </a>
+        </figure>
+      </div>
+      <div class="box">
+        <h2>Contacto</h2>
+        <p>
+          <a href="mailto:franco-petshop@gmail.com">franco-petshop@gmail.com</a>
+        </p>
+        <p>Telefono: 11-2190-3779</p>
+        <p>Direccion: Rio de janeiro 300 (Caballito)</p>
+      </div>
+      <div class="box">
+        <h2>Redes Sociales</h2>
+        <div class="red-social">
+          <a href="https://www.facebook.com/Petshop-franco-101898965339682" class="fa fa-facebook"></a>
+          <a href="https://www.instagram.com/pet_shop_franco/?hl=es" class="fa fa-instagram"></a>
+          <a href="https://api.whatsapp.com/send?phone=+1167313204&text=Hola%20%F0%9F%91%8B!%20Te%20estas%20comunicando%20con%20Pet%20Shop%20FRANCO%F0%9F%90%95.%20En%20que%20podemos%20ayudarte?"
+            class="fa fa-whatsapp"></a>
+          <a href="ttps://www.youtube.com/pet_shop_franco" class="fa fa-youtube"></a>
+        </div>
+      </div>
+    </div>
+    <div class="grupo-2">
+      <small>&copy; 2022 <b>Cohort 29</b> - JAVA</small>
+    </div>
+  </footer>
+  <div class="loader-container">
+    <img src="https://www.makai.com.gt/img/loading.gif" alt="" />
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+  <script src="../js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+    crossorigin="anonymous"></script>
+  <script src="../vue.js"></script>
+</body>
+
+</html>

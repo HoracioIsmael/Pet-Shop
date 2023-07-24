@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>details</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/style_2.css">
+    <link rel="icon" href="../img/unknown.png">
+</head>
+
+<body>
+    <header class="header d-flex" style="height:110px;">
+        <img src="../assets/logo.png" alt="franco logo" width="250">
+        <nav class="navbar mt-2">
+            <a href="../index.html" class="nvrr">Inicio</a>
+            <a href="../farmacia.html" class="nvrr">Farmacia</a>
+            <a href="../juguetes.html" class="nvrr">Juguetes</a>
+            <a href="../contacto.html" class="nvrr">Contactenos</a>
+            <a href="../carrito.html"><img class="carrito-nav" src="../assets/icons8-shopping-cart-48.png"
+                    alt="" /></a>
+        </nav>
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                <h1>DETALLES</h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- fil del nav -->
+
+    <!-- contenido -->
+    <div id="app">
+        <div class="contenedor-carta">
+
+
+
+            <div class="details-container">
+                <div class="imagen-details">
+                    <img style="width: 330px; height: 300px;" :src="cartaDetails.imagen" alt="imagen">
+                </div>
+                <div class="contenido-details">
+                    <h2>{{cartaDetails.nombre}}</h2>
+
+                    <p>
+                        {{cartaDetails.descripcion}}
+                    </p>
+
+                    <p>
+                        ${{cartaDetails.precio}}
+                    </p>
+
+                    <div class="botones-details">
+
+                        <a href="./index.html" class="boton-details"> volver al inicio</a>
+                        <form>
+                            <a href="#" class="boton-details" @click="escuchadorCarrito(cartaDetails)">agregar al
+                                carrito</a>
+                        </form>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+        <!-- <div class="d-flex justify-content-center align-items-center" v-if="mje">
+            <div class="content-mje d-flex justify-content-center align-items-center">
+                <div class="message mje">{{mje}}</div>
+                <button class="btn-mje" @click="borrarMje"><img class="ok" src="/assets/icons8-ok-48.png"
+                        alt=""></button>
+            </div>
+        </div> -->
+        <div style="position: absolute; bottom: 5rem; right: 5rem;" class="sticky-bottom">
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast bg-success text-white"
+                data-delay="3000" data-autohide="true" id="toast-success">
+                <div class="toast-header bg-success text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-plus-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM9 5.5V7h1.5a.5.5 0 0 1 0 1H9v1.5a.5.5 0 0 1-1 0V8H6.5a.5.5 0 0 1 0-1H8V5.5a.5.5 0 0 1 1 0z" />
+                    </svg>
+                    <strong class="mr-auto">Añadir</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    Ítem añadido al carrito correctamente
+                </div>
+            </div>
+
+            <div role="alert" aria-live="assertive" aria-atomic="true" class="toast bg-danger text-white"
+                data-delay="3000" data-autohide="true" id="toast-delete">
+                <div class="toast-header bg-danger text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="bi bi-cart-x-fill" viewBox="0 0 16 16">
+                        <path
+                            d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zM7.354 5.646 8.5 6.793l1.146-1.147a.5.5 0 0 1 .708.708L9.207 7.5l1.147 1.146a.5.5 0 0 1-.708.708L8.5 8.207 7.354 9.354a.5.5 0 1 1-.708-.708L7.793 7.5 6.646 6.354a.5.5 0 1 1 .708-.708z" />
+                    </svg>
+                    <strong class="mr-auto">No se puede agregar</strong>
+                    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="toast-body">
+                    No hay suficiente stock para agregar el ítem
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- fin contenido -->
+
+    <!--FOOTER-->
+    <footer class="pie-pagina">
+        <div class="grupo-1">
+            <div class="box">
+                <figure>
+                    <a href="index.html">
+                        <img src="../assets/logo_pet_shop_franco.png" alt="logo footer" id="logo_franco">
+                    </a>
+                </figure>
+            </div>
+            <div class="box">
+                <h2>Contacto</h2>
+                <p><a href="mailto:franco-petshop@gmail.com">franco-petshop@gmail.com</a></p>
+                <p>Telefono: 11-2190-3779</p>
+                <p>Direccion: Rio de janeiro 300 (Caballito)</p>
+            </div>
+            <div class="box">
+                <h2>Redes Sociales</h2>
+                <div class="red-social">
+                    <a href="https://www.facebook.com/Petshop-franco-101898965339682" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/pet_shop_franco/?hl=es" class="fa fa-instagram"></a>
+                    <a href="https://api.whatsapp.com/send?phone=+1167313204&text=Hola%20%F0%9F%91%8B!%20Te%20estas%20comunicando%20con%20Pet%20Shop%20FRANCO%F0%9F%90%95.%20En%20que%20podemos%20ayudarte?"
+                        class="fa fa-whatsapp"></a>
+                    <a href="ttps://www.youtube.com/pet_shop_franco" class="fa fa-youtube"></a>
+                </div>
+            </div>
+        </div>
+        <div class="grupo-2">
+            <small>&copy; 2022 <b>Cohort 29</b> - JAVA</small>
+        </div>
+    </footer>
+    <div class="loader-container">
+        <img src="https://www.makai.com.gt/img/loading.gif" alt="">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8e3741e47f.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="../js/main.js"></script>
+    <script src="../vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- <script>$('#toast-success').toast('show')</script>
+    <script>$('#toast-delete').toast('show')</script> -->
+</body>
+
+
+</body>
+
+</html>
